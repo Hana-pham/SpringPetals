@@ -12,24 +12,34 @@ body {
 
 .home {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping, keep side-by-side layout */
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: nowrap;
 }
 
+/* Ensure both columns are always 50% width */
+.logo-and-menu,
+.main-image-container {
+    width: 50%;
+}
+
+/* Center content in the first column */
 .logo-and-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 50%; /* Restrict to 50% width */
-    height: 100%;
+    justify-content: center; /* Vertically center the content */
+    width: 50%;
+    box-sizing: border-box; /* Ensure padding/margins don't affect the width/height */
 }
 
+
+
+/* Logo Styling */
 .logo {
-    max-width: 350px;
+    max-width: 550px;
     height: auto;
-    padding: 130px 0px 70px 0px;
+    padding: 200px 0px 70px 0px;
 }
 
 .menu {
@@ -43,15 +53,14 @@ body {
 .menu a {
     color: #E52F66;
     text-decoration: none;
-    font-size: 2rem; /* Default font size */
-    padding: 0px 0px 10px 0px;
-    transition: font-size 0.3s ease; /* Smooth transition for font size change */
+    font-size: 3rem; /* Default font size */
+    padding: 20px 0px 10px 0px;
+    transition: font-size 0.3s ease;
 }
 
 /* Main Image Section */
 .main-image-container {
     text-align: center;
-    width: 50%; /* Restrict to 50% width */
 }
 
 .main-image {
@@ -117,164 +126,50 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    .logo-and-menu,
+    .main-image-container {
+        width: 50%; /* Maintain 50% width on smaller screens */
+    }
+
     .logo {
         max-width: 250px;
         padding: 100px 0px 50px 0px; /* Adjust padding as needed */
     }
 
     .menu a {
-        font-size: 2rem; /* Adjust font size for medium screens */
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
         padding: 0px 0px 0px 0px;
-    }
-
-    .main-image-container {
-        width: 50%; /* Keep the image to 50% of the header */
-    }
-
-    .subscription {
-        padding: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .logo-and-menu,
+    .main-image-container {
+        width: 50%; /* Ensure both columns remain at 50% width */
+    }
+
     .logo {
-        max-width: 150px; /* Further reduce logo size */
+        max-width: 150px;
         padding: 70px 0px 0px 0px; /* Further adjust padding */
     }
 
     .menu a {
         font-size: 1.2rem; /* Further reduce font size for small screens */
-        padding: 0px 0px 00px 0px;
-    }
-
-    .subscription h2 {
-        font-size: 1.5rem;
-    }
-
-    .subscription p {
-        font-size: 1rem;
-    }
-
-    .star-items {
-        flex-direction: column;
     }
 }
 
 @media screen and (max-width: 400px) {
+    .logo-and-menu,
+    .main-image-container {
+        width: 50%; /* Maintain 50% width on very small screens */
+    }
+
     .logo {
-        max-width: 140px; /* Further reduce logo size */
-        padding: 60px 0px 0px 0px; /* Further adjust padding */
+        max-width: 140px;
+        padding: 60px 0px 0px 0px;
     }
 
     .menu a {
-        font-size: 1rem; /* Further reduce font size for small screens */
-        padding: 0px 0px 00px 0px;
-    }
-
-    .subscription h2 {
-        font-size: 1.5rem;
-    }
-
-    .subscription p {
         font-size: 1rem;
-    }
-
-    .star-items {
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .logo {
-        max-width: 130px; /* Further reduce logo size */
-        padding: 50px 0px 0px 0px; /* Further adjust padding */
-    }
-
-    .menu a {
-        font-size: 0.85rem; /* Further reduce font size for small screens */
-        padding: 0px 0px 00px 0px;
-    }
-
-    .subscription h2 {
-        font-size: 1.5rem;
-    }
-
-    .subscription p {
-        font-size: 1rem;
-    }
-
-    .star-items {
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 350px) {
-    .logo {
-        max-width: 100px; /* Further reduce logo size */
-        padding: 50px 0px 0px 0px; /* Further adjust padding */
-    }
-
-    .menu a {
-        font-size: 0.8rem; /* Further reduce font size for small screens */
-        padding: 0px 0px 00px 0px;
-    }
-
-    .subscription h2 {
-        font-size: 1.5rem;
-    }
-
-    .subscription p {
-        font-size: 1rem;
-    }
-
-    .star-items {
-        flex-direction: column;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    .logo {
-        max-width: 100px; /* Further reduce logo size */
-        padding: 40px 0px 0px 0px; /* Further adjust padding */
-    }
-
-    .menu a {
-        font-size: 0.6rem; /* Further reduce font size for small screens */
-        padding: 0px 0px 00px 0px;
-    }
-
-    .subscription h2 {
-        font-size: 1.5rem;
-    }
-
-    .subscription p {
-        font-size: 1rem;
-    }
-
-    .star-items {
-        flex-direction: column;
-    }
-}
-@media screen and (max-width: 220px) {
-    .logo {
-        max-width: 80px; /* Further reduce logo size */
-        padding: 20px 0px 0px 0px; /* Further adjust padding */
-    }
-
-    .menu a {
-        font-size: 0.5rem; /* Further reduce font size for small screens */
-        padding: 0px 0px 00px 0px;
-    }
-
-    .subscription h2 {
-        font-size: 1.5rem;
-    }
-
-    .subscription p {
-        font-size: 1rem;
-    }
-
-    .star-items {
-        flex-direction: column;
     }
 }
