@@ -5,47 +5,58 @@ body {
     padding: 0;
 }
 
+/* Header Section */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FFF7FA; 
+    background-color: #FFF7FA;
 }
+
 .home {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.menu{
-    text-align: center;
-    font-size: 2rem;
-    
-}
-
-.h1 {
-    font-family: 'Serif';
-    color: #D12179; /* Match the pink color for the logo */
-    font-size: 2rem;
-}
-
-.nav ul {
-    list-style: none;
     display: flex;
-    gap: 20px;
+    flex-wrap: nowrap; /* Prevent wrapping, keep side-by-side layout */
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.nav ul li a {
+.logo-and-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* Restrict to 50% width */
+    height: 100%;
+}
+
+.logo {
+    max-width: 350px;
+    height: auto;
+    padding: 130px 0px 70px 0px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.menu a {
+    color: #E52F66;
     text-decoration: none;
-    color: #D12179;
-    font-size: 1.2rem;
+    font-size: 2rem; /* Default font size */
+    padding: 0px 0px 10px 0px;
+    transition: font-size 0.3s ease; /* Smooth transition for font size change */
 }
 
-.icons {
-    display: inline-grid;
+/* Main Image Section */
+.main-image-container {
+    text-align: center;
+    width: 50%; /* Restrict to 50% width */
 }
-.icons a img {
-    width: 24px;
-    margin-left: 20px;
+
+.main-image {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto;
 }
 
 /* Subscription Section */
@@ -59,7 +70,6 @@ body {
     color: #D82C4B;
     font-size: 2rem;
     margin-bottom: 30px;
-    padding-bottom: 20px;
 }
 
 .subscription p {
@@ -67,15 +77,11 @@ body {
     font-size: 1.5rem;
     max-width: 700px;
     margin: 0 auto;
-    padding-top: 20px;
 }
 
 /* Stars of the Week Section */
-
 .stars-of-the-week {
     text-align: center;
-
-    
 }
 
 .stars-of-the-week h3 {
@@ -111,13 +117,18 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .nav ul {
-        flex-direction: column;
-        gap: 10px;
+    .logo {
+        max-width: 250px;
+        padding: 100px 0px 50px 0px; /* Adjust padding as needed */
     }
 
-    .star-items {
-        flex-direction: column;
+    .menu a {
+        font-size: 2rem; /* Adjust font size for medium screens */
+        padding: 0px 0px 0px 0px;
+    }
+
+    .main-image-container {
+        width: 50%; /* Keep the image to 50% of the header */
     }
 
     .subscription {
@@ -126,13 +137,14 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .header home menu{
-        flex-direction: column;
-        text-align: center;
+    .logo {
+        max-width: 150px; /* Further reduce logo size */
+        padding: 70px 0px 0px 0px; /* Further adjust padding */
     }
 
-    .icons a img {
-        margin-left: 10px;
+    .menu a {
+        font-size: 1.2rem; /* Further reduce font size for small screens */
+        padding: 0px 0px 00px 0px;
     }
 
     .subscription h2 {
@@ -141,5 +153,128 @@ body {
 
     .subscription p {
         font-size: 1rem;
+    }
+
+    .star-items {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        max-width: 140px; /* Further reduce logo size */
+        padding: 60px 0px 0px 0px; /* Further adjust padding */
+    }
+
+    .menu a {
+        font-size: 1rem; /* Further reduce font size for small screens */
+        padding: 0px 0px 00px 0px;
+    }
+
+    .subscription h2 {
+        font-size: 1.5rem;
+    }
+
+    .subscription p {
+        font-size: 1rem;
+    }
+
+    .star-items {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .logo {
+        max-width: 130px; /* Further reduce logo size */
+        padding: 50px 0px 0px 0px; /* Further adjust padding */
+    }
+
+    .menu a {
+        font-size: 0.85rem; /* Further reduce font size for small screens */
+        padding: 0px 0px 00px 0px;
+    }
+
+    .subscription h2 {
+        font-size: 1.5rem;
+    }
+
+    .subscription p {
+        font-size: 1rem;
+    }
+
+    .star-items {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .logo {
+        max-width: 100px; /* Further reduce logo size */
+        padding: 50px 0px 0px 0px; /* Further adjust padding */
+    }
+
+    .menu a {
+        font-size: 0.8rem; /* Further reduce font size for small screens */
+        padding: 0px 0px 00px 0px;
+    }
+
+    .subscription h2 {
+        font-size: 1.5rem;
+    }
+
+    .subscription p {
+        font-size: 1rem;
+    }
+
+    .star-items {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .logo {
+        max-width: 100px; /* Further reduce logo size */
+        padding: 40px 0px 0px 0px; /* Further adjust padding */
+    }
+
+    .menu a {
+        font-size: 0.6rem; /* Further reduce font size for small screens */
+        padding: 0px 0px 00px 0px;
+    }
+
+    .subscription h2 {
+        font-size: 1.5rem;
+    }
+
+    .subscription p {
+        font-size: 1rem;
+    }
+
+    .star-items {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 220px) {
+    .logo {
+        max-width: 80px; /* Further reduce logo size */
+        padding: 20px 0px 0px 0px; /* Further adjust padding */
+    }
+
+    .menu a {
+        font-size: 0.5rem; /* Further reduce font size for small screens */
+        padding: 0px 0px 00px 0px;
+    }
+
+    .subscription h2 {
+        font-size: 1.5rem;
+    }
+
+    .subscription p {
+        font-size: 1rem;
+    }
+
+    .star-items {
+        flex-direction: column;
     }
 }
