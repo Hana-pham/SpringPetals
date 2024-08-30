@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Jura", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -9,11 +9,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #FEE7F0; /* Match the light pink background */
+    background-color: #FFF7FA; 
+}
+.home {
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
 
-.logo h1 {
+.menu{
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+.h1 {
     font-family: 'Serif';
     color: #D12179; /* Match the pink color for the logo */
     font-size: 2rem;
@@ -31,6 +40,9 @@ body {
     font-size: 1.2rem;
 }
 
+.icons {
+    display: inline-grid;
+}
 .icons a img {
     width: 24px;
     margin-left: 20px;
@@ -40,31 +52,37 @@ body {
 .subscription {
     text-align: center;
     padding: 50px;
-    background-color: #FFF;
+    background-color: #FFA4C7;
 }
 
 .subscription h2 {
-    color: #D12179;
+    color: #D82C4B;
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
 }
 
 .subscription p {
-    color: #555;
-    font-size: 1.2rem;
-    max-width: 600px;
+    color: #E52F66;
+    font-size: 1.5rem;
+    max-width: 700px;
     margin: 0 auto;
+    padding-top: 20px;
 }
 
 /* Stars of the Week Section */
+
 .stars-of-the-week {
     text-align: center;
-    padding: 50px;
+
+    
 }
 
 .stars-of-the-week h3 {
-    color: #D12179;
     font-size: 1.5rem;
+    background-color: #EF7A9D;
+    padding: 20px;
+    color: #FFFFFF;
 }
 
 .star-items {
@@ -108,7 +126,7 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .header {
+    .header home menu{
         flex-direction: column;
         text-align: center;
     }
