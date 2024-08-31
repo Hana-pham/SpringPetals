@@ -7,56 +7,80 @@ body {
 
 /* Header Section */
 .header {
-    background-color: #FFF7FA;
-}
-
-.home {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: nowrap;
+    padding: 10px;
+    background-color: #FFF7FA; 
 }
 
-/* Ensure both columns are always 50% width */
-.logo-and-menu,
-.main-image-container {
-    width: 50%;
+.logo {
+    padding: 20px 0px 20px 20px;
+    max-width: 290px; 
 }
 
-/* Center content in the first column */
-.logo-and-menu {
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between icons and text */
+}
+
+.icon {
+    display: inline-block;
+    max-width: 40px;
+}
+
+.contact {
+    display: inline-block;
+    font-size: 25px; 
+    padding: 0px 10px 0px 10px;
+    color: #E52F66;
+    text-decoration: none;
+}
+
+.contact:hover{
+    color: black;
+}
+
+
+
+/* Navigation Section */
+.navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Vertically center the content */
-    width: 50%;
-    box-sizing: border-box; /* Ensure padding/margins don't affect the width/height */
 }
 
-
-
-/* Logo Styling */
-.logo {
-    max-width: 550px;
-    height: auto;
-    padding: 200px 0px 70px 0px;
-}
-
+/* Menu Grid */
+/* Fix the Navigation Section */
 .menu {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-    align-items: center;
+    justify-content: space-between; /* Evenly distribute the space */
+    width: 100%; /* Ensure it fits the full width */
+    background-color: #FFC2D9; 
 }
 
 .menu a {
-    color: #E52F66;
+    flex: 1; /* Each link takes up equal space */
+    text-align: center; /* Center text */
+    color: white;
+    font-size: 25px;
     text-decoration: none;
-    font-size: 3rem; /* Default font size */
-    padding: 20px 0px 10px 0px;
-    transition: font-size 0.3s ease;
+    padding: 10px 0px 10px 0px;
 }
+
+.odd {
+    background-color: #FFA4C7;
+}
+
+.even{
+    background-color: #FABBD4;
+}
+
+.menu a:hover {
+    background-color: #C72654; /* Hover effect */
+}
+
 
 /* Main Image Section */
 .main-image-container {
@@ -64,37 +88,38 @@ body {
 }
 
 .main-image {
-    width: 100%; /* Ensure the image fills its container */
+    width: 100%;
     height: auto;
 }
 
 /* Subscription Section */
 .subscription {
     text-align: center;
-    padding: 50px;
-    background-color: #FFA4C7;
+    padding: 20px;
+    background-color: #FFFFFF;
 }
 
 .subscription h2 {
     color: #D82C4B;
     font-size: 2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .subscription p {
     color: #E52F66;
     font-size: 1.5rem;
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 /* Stars of the Week Section */
 .stars-of-the-week {
     text-align: center;
+    
 }
 
 .stars-of-the-week h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color: #EF7A9D;
     padding: 20px;
     color: #FFFFFF;
@@ -108,68 +133,92 @@ body {
 }
 
 .star-item {
-    width: 150px;
-    height: 150px;
-    background-color: #FEE7F0;
+    width: 250px;
+    height: 250px;
+    background-color: #FFA4C7;
 }
 
-/* Browse Button */
 .browse-all {
     display: inline-block;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px 20px;
-    background-color: #FFC2D9;
-    color: #D12179;
+    background-color: #F4DBE7;
+    color: #D82C4B;
     text-decoration: none;
-    border-radius: 5px;
+    font-size: 1.5rem;
 }
+
+.footer {
+    background-color:#EF7A9D;
+    padding: 20px 0px 20px 0px;
+}
+
+.column {
+    float: left;    
+}
+
+.left{
+    width: 40%;
+}
+
+.middle, .right {
+    width: 30%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle a, .right a {
+    display: block; 
+    margin: 5px 0;
+    text-decoration: none;
+    color: #D82C4B;
+    font-size: 20px;
+}
+
+.middle a:hover, .right a:hover{
+    color: #FFFFFF;
+}
+.middle h2, .right h2 {
+    color: #D82C4B;
+    font-size: 30px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .logo-and-menu,
-    .main-image-container {
-        width: 50%; /* Maintain 50% width on smaller screens */
+    .menu {
+        grid-template-columns: 1fr;
     }
 
-    .logo {
-        max-width: 250px;
-        padding: 100px 0px 50px 0px; /* Adjust padding as needed */
+    .main-image {
+        width: 100%;
     }
 
-    .menu a {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-        padding: 0px 0px 0px 0px;
+    .subscription p {
+        font-size: 1.2rem;
     }
-}
-
-@media screen and (max-width: 480px) {
-    .logo-and-menu,
-    .main-image-container {
-        width: 50%; /* Ensure both columns remain at 50% width */
+    .footer {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        align-items: center;
     }
 
-    .logo {
-        max-width: 150px;
-        padding: 70px 0px 0px 0px; /* Further adjust padding */
+    .column {
+        width: 100%; /* Make each column take full width on smaller screens */
+        text-align: center;
+        margin: 10px 0; /* Optional spacing between stacked columns */
     }
 
-    .menu a {
-        font-size: 1.2rem; /* Further reduce font size for small screens */
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .logo-and-menu,
-    .main-image-container {
-        width: 50%; /* Maintain 50% width on very small screens */
+    .left {
+        width: 100%; /* Full width for the left column on smaller screens */
     }
 
-    .logo {
-        max-width: 140px;
-        padding: 60px 0px 0px 0px;
-    }
-
-    .menu a {
-        font-size: 1rem;
+    .middle, .right {
+        width: 100%; /* Full width for middle and right columns on smaller screens */
     }
 }
