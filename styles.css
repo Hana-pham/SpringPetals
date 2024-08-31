@@ -1,8 +1,10 @@
 /* General Styles */
+
 body {
     font-family: "Jura", sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Header Section */
@@ -18,6 +20,8 @@ body {
     padding: 20px 0px 20px 20px;
     max-width: 290px; 
 }
+
+
 
 .header-controls {
     display: flex;
@@ -191,7 +195,7 @@ body {
   }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .menu {
         grid-template-columns: 1fr;
     }
