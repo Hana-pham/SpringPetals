@@ -1,5 +1,4 @@
 /* General Styles */
-
 body {
     font-family: "Jura", sans-serif;
     margin: 0;
@@ -18,11 +17,10 @@ body {
 
 .logo {
     padding: 20px 0px 20px 20px;
-    max-width: 290px; 
+    max-width: 290px;
 }
 
-
-
+/* Header controls for icons and contact text */
 .header-controls {
     display: flex;
     align-items: center;
@@ -36,17 +34,15 @@ body {
 
 .contact {
     display: inline-block;
-    font-size: 25px; 
+    font-size: 25px;
     padding: 0px 10px 0px 10px;
     color: #E52F66;
     text-decoration: none;
 }
 
-.contact:hover{
+.contact:hover {
     color: black;
 }
-
-
 
 /* Navigation Section */
 .navigation {
@@ -56,7 +52,6 @@ body {
 }
 
 /* Menu Grid */
-/* Fix the Navigation Section */
 .menu {
     display: flex;
     justify-content: space-between; /* Evenly distribute the space */
@@ -77,14 +72,13 @@ body {
     background-color: #FFA4C7;
 }
 
-.even{
+.even {
     background-color: #FABBD4;
 }
 
 .menu a:hover {
     background-color: #C72654; /* Hover effect */
 }
-
 
 /* Main Image Section */
 .main-image-container {
@@ -119,7 +113,6 @@ body {
 /* Stars of the Week Section */
 .stars-of-the-week {
     text-align: center;
-    
 }
 
 .stars-of-the-week h3 {
@@ -162,7 +155,7 @@ body {
     float: left;    
 }
 
-.left{
+.left {
     width: 40%;
 }
 
@@ -174,63 +167,66 @@ body {
 }
 
 .middle a, .right a {
-    display: block; 
+    display: block;
     margin: 5px 0;
     text-decoration: none;
     color: #D82C4B;
     font-size: 20px;
 }
 
-.middle a:hover, .right a:hover{
+.middle a:hover, .right a:hover {
     color: #FFFFFF;
 }
+
 .middle h2, .right h2 {
     color: #D82C4B;
     font-size: 30px;
 }
+
 .row:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 /* Responsive Design */
-@media screen and (max-width: 800px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px; /* Adjust padding to fit mobile view */
-    }
-    
-    .header-controls {
-        flex-direction: column; /* Stack icons and text vertically */
-        gap: 10px; /* Adjust the gap for mobile */
-    }
-
+@media screen and (max-width: 768px) {
+    /* Adjust logo and icons size */
     .logo {
-        padding: 10px 0; /* Adjust padding to fit smaller screens */
-        max-width: 200px; /* Reduce logo size */
+        max-width: 180px; /* Smaller logo size */
+        padding: 10px 0px 10px 10px;
     }
 
     .icon {
-        max-width: 30px; /* Adjust icon size for mobile */
+        max-width: 25px; /* Smaller icons */
     }
 
     .contact {
-        font-size: 20px; /* Smaller font size */
+        font-size: 18px; /* Smaller text for contact */
+        padding: 0px 5px; /* Adjust padding for smaller screens */
     }
-    
+
+    /* Adjust header controls spacing */
+    .header-controls {
+        gap: 10px; /* Reduce gap between icons and text */
+    }
+
+    /* Menu adjustments */
     .menu {
         grid-template-columns: 1fr;
     }
 
+    /* Image adjustments */
     .main-image {
         width: 100%;
     }
 
+    /* Subscription text size */
     .subscription p {
         font-size: 1.2rem;
     }
+
+    /* Footer adjustments */
     .footer {
         flex-direction: column; /* Stack columns vertically on smaller screens */
         align-items: center;
