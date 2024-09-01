@@ -213,7 +213,12 @@ body {
 
     /* Menu adjustments */
     .menu {
-        grid-template-columns: 1fr;
+        flex-direction: row; /* Ensure the menu remains horizontal */
+    }
+
+    .menu a {
+        font-size: 18px; /* Smaller font size */
+        padding: 5px 0; /* Adjust padding to fit smaller screens */
     }
 
     /* Image adjustments */
