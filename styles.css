@@ -217,7 +217,7 @@ body {
     }
 
     .menu a {
-        font-size: 18px; /* Smaller font size */
+        font-size: 10px; /* Smaller font size */
         padding: 5px 0; /* Adjust padding to fit smaller screens */
     }
 
@@ -227,8 +227,11 @@ body {
     }
 
     /* Subscription text size */
+    .subscription h2{
+        font-size: 1.5rem;
+    }
     .subscription p {
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
 
     /* Footer adjustments */
