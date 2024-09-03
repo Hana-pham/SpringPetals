@@ -89,7 +89,11 @@ body {
     width: 100%;
     height: auto;
 }
-
+.image-mobile {
+    display: none;
+    width: 100%;
+    height: auto;
+}
 /* Subscription Section */
 .subscription {
     text-align: center;
@@ -135,6 +139,19 @@ body {
     background-color: #FFA4C7;
 }
 
+.item-image{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 3em;
+}
+.container-items{
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+}
 .browse-all {
     display: inline-block;
     margin-top: 20px;
@@ -193,16 +210,16 @@ body {
 @media screen and (max-width: 768px) {
     /* Adjust logo and icons size */
     .logo {
-        max-width: 180px; /* Smaller logo size */
-        padding: 10px 0px 10px 10px;
+        max-width: 100px; /* Smaller logo size */
+        padding: 5px 0px 0px 5px;
     }
 
     .icon {
-        max-width: 25px; /* Smaller icons */
+        max-width: 15px; /* Smaller icons */
     }
 
     .contact {
-        font-size: 18px; /* Smaller text for contact */
+        font-size: 10px; /* Smaller text for contact */
         padding: 0px 5px; /* Adjust padding for smaller screens */
     }
 
@@ -223,15 +240,29 @@ body {
 
     /* Image adjustments */
     .main-image {
-        width: 100%;
+        display: none;
     }
+    .image-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
 
     /* Subscription text size */
     .subscription h2{
-        font-size: 1.5rem;
+        font-size: 1.1rem;
     }
     .subscription p {
-        font-size: 1.0rem;
+        font-size: 0.7rem;
+    }
+
+    .stars-of-the-week h3 {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    .browse-all {
+        font-size: 0.7rem;
     }
 
     /* Footer adjustments */
@@ -252,5 +283,11 @@ body {
 
     .middle, .right {
         width: 100%; /* Full width for middle and right columns on smaller screens */
+    }
+    .middle a, .right a {
+        font-size: 15px;
+    }
+    .middle h2, .right h2 {
+        font-size: 20px;
     }
 }
