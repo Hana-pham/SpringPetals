@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #FFF7FA; 
+    background-color: #FFF7FA;
 }
 
 .logo {
@@ -24,7 +24,8 @@ body {
 .header-controls {
     display: flex;
     align-items: center;
-    gap: 20px; /* Space between icons and text */
+    gap: 20px;
+    /* Space between icons and text */
 }
 
 .icon {
@@ -54,14 +55,18 @@ body {
 /* Menu Grid */
 .menu {
     display: flex;
-    justify-content: space-between; /* Evenly distribute the space */
-    width: 100%; /* Ensure it fits the full width */
-    background-color: #FFC2D9; 
+    justify-content: space-between;
+    /* Evenly distribute the space */
+    width: 100%;
+    /* Ensure it fits the full width */
+    background-color: #FFC2D9;
 }
 
 .menu a {
-    flex: 1; /* Each link takes up equal space */
-    text-align: center; /* Center text */
+    flex: 1;
+    /* Each link takes up equal space */
+    text-align: center;
+    /* Center text */
     color: white;
     font-size: 25px;
     text-decoration: none;
@@ -77,7 +82,8 @@ body {
 }
 
 .menu a:hover {
-    background-color: #C72654; /* Hover effect */
+    background-color: #C72654;
+    /* Hover effect */
 }
 
 /* Main Image Section */
@@ -89,11 +95,13 @@ body {
     width: 100%;
     height: auto;
 }
+
 .image-mobile {
     display: none;
     width: 100%;
     height: auto;
 }
+
 /* Subscription Section */
 .subscription {
     text-align: center;
@@ -139,7 +147,7 @@ body {
     background-color: #FFA4C7;
 }
 
-.item-image{
+.item-image {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -147,11 +155,13 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 3em;
 }
-.container-items{
+
+.container-items {
     height: 100px;
     width: 100px;
     object-fit: contain;
 }
+
 .browse-all {
     display: inline-block;
     margin-top: 20px;
@@ -164,26 +174,28 @@ body {
 }
 
 .footer {
-    background-color:#EF7A9D;
+    background-color: #EF7A9D;
     padding: 20px 0px 20px 0px;
 }
 
 .column {
-    float: left;    
+    float: left;
 }
 
 .left {
     width: 40%;
 }
 
-.middle, .right {
+.middle,
+.right {
     width: 30%;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-.middle a, .right a {
+.middle a,
+.right a {
     display: block;
     margin: 5px 0;
     text-decoration: none;
@@ -191,11 +203,13 @@ body {
     font-size: 20px;
 }
 
-.middle a:hover, .right a:hover {
+.middle a:hover,
+.right a:hover {
     color: #FFFFFF;
 }
 
-.middle h2, .right h2 {
+.middle h2,
+.right h2 {
     color: #D82C4B;
     font-size: 30px;
 }
@@ -208,51 +222,61 @@ body {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+
     /* Adjust logo and icons size */
     .logo {
-        max-width: 100px; /* Smaller logo size */
+        max-width: 100px;
+        /* Smaller logo size */
         padding: 5px 0px 0px 5px;
     }
 
     .icon {
-        max-width: 15px; /* Smaller icons */
+        max-width: 15px;
+        /* Smaller icons */
     }
 
     .contact {
-        font-size: 10px; /* Smaller text for contact */
-        padding: 0px 5px; /* Adjust padding for smaller screens */
+        font-size: 10px;
+        /* Smaller text for contact */
+        padding: 0px 5px;
+        /* Adjust padding for smaller screens */
     }
 
     /* Adjust header controls spacing */
     .header-controls {
-        gap: 10px; /* Reduce gap between icons and text */
+        gap: 10px;
+        /* Reduce gap between icons and text */
     }
 
     /* Menu adjustments */
     .menu {
-        flex-direction: row; /* Ensure the menu remains horizontal */
+        flex-direction: row;
+        /* Ensure the menu remains horizontal */
     }
 
     .menu a {
-        font-size: 10px; /* Smaller font size */
-        padding: 5px 0; /* Adjust padding to fit smaller screens */
+        font-size: 10px;
+        /* Smaller font size */
+        padding: 5px 0;
+        /* Adjust padding to fit smaller screens */
     }
 
     /* Image adjustments */
     .main-image {
         display: none;
     }
+
     .image-mobile {
         display: block;
         width: 100%;
         height: auto;
     }
 
-
     /* Subscription text size */
-    .subscription h2{
+    .subscription h2 {
         font-size: 1.1rem;
     }
+
     .subscription p {
         font-size: 0.7rem;
     }
@@ -261,33 +285,57 @@ body {
         font-size: 1rem;
         padding: 8px;
     }
+
+    .product-image {
+        max-width: 120px;
+        /* Set a maximum width for mobile screens */
+        height: auto;
+        /* Maintain aspect ratio */
+    }
+
+    .item-image {
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+        /* Adjust grid columns for smaller items */
+        grid-gap: 1em;
+    }
+
     .browse-all {
         font-size: 0.7rem;
     }
 
     /* Footer adjustments */
     .footer {
-        flex-direction: column; /* Stack columns vertically on smaller screens */
+        flex-direction: column;
+        /* Stack columns vertically on smaller screens */
         align-items: center;
     }
 
     .column {
-        width: 100%; /* Make each column take full width on smaller screens */
+        width: 100%;
+        /* Make each column take full width on smaller screens */
         text-align: center;
-        margin: 10px 0; /* Optional spacing between stacked columns */
+        margin: 10px 0;
+        /* Optional spacing between stacked columns */
     }
 
     .left {
-        width: 100%; /* Full width for the left column on smaller screens */
+        width: 100%;
+        /* Full width for the left column on smaller screens */
     }
 
-    .middle, .right {
-        width: 100%; /* Full width for middle and right columns on smaller screens */
+    .middle,
+    .right {
+        width: 100%;
+        /* Full width for middle and right columns on smaller screens */
     }
-    .middle a, .right a {
+
+    .middle a,
+    .right a {
         font-size: 15px;
     }
-    .middle h2, .right h2 {
+
+    .middle h2,
+    .right h2 {
         font-size: 20px;
     }
 }

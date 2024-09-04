@@ -4,12 +4,6 @@ const products = [
         "id": "Tulips",
         "title": "Tulip Bouquet",
         "price": 35.00,
-        "image": "/images/image 10 (1).png"
-    },
-    {
-        "id": "Roses",
-        "title": "Rose Bouquet",
-        "price": 45.00,
         "image": "/images/white_tulip.jpg"
     },
     {
@@ -18,7 +12,12 @@ const products = [
         "price": 45.00,
         "image": "/images/white_tulip.jpg"
     },
-    // Add more products here (50+)
+    {
+        "id": "Roses",
+        "title": "Rose Bouquet",
+        "price": 45.00,
+        "image": "/images/white_tulip.jpg"
+    }
 ];
 
 // Function to render products dynamically
@@ -29,7 +28,7 @@ function renderProducts() {
     products.forEach(product => {
         const productItem = document.createElement('li');
         productItem.innerHTML = `
-            <img src="${product.image}" alt="${product.title}">
+            <img src="${product.image}" alt="${product.title}" class="product-image">
             <h4>${product.title}</h4>
             <p>$${product.price.toFixed(2)}</p>
             <p><button>Add to Cart</button></p>
