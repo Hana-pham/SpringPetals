@@ -28,7 +28,9 @@ function renderProducts() {
     products.forEach(product => {
         const productItem = document.createElement('li');
         productItem.innerHTML = `
-            <img src="${product.image}" alt="${product.title}" class="product-image">
+                <div class="image-container">
+        <img src="${product.image}" alt="${product.title}" class="product-image">
+    </div>
             <h4>${product.title}</h4>
             <p>$${product.price.toFixed(2)}</p>
             <p><button>Add to Cart</button></p>
