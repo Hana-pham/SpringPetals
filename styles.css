@@ -340,6 +340,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
         /* Adjust grid columns for smaller items */
         grid-gap: 1em;
+        padding: 0px 10px 0px 10px;
     }
 
     .browse-all {
