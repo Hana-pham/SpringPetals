@@ -4,19 +4,19 @@ const products = [
         "id": "Tulips",
         "title": "Tulip Bouquet",
         "price": 35.00,
-        "image": "/images/white_tulip.jpg"
+        "image": "./images/white_tulip.jpg"
     },
     {
         "id": "Roses",
         "title": "Rose Bouquet",
         "price": 45.00,
-        "image": "/images/white_tulip.jpg"
+        "image": "./images/white_tulip.jpg"
     },
     {
         "id": "Roses",
         "title": "Rose Bouquet",
         "price": 45.00,
-        "image": "/images/white_tulip.jpg"
+        "image": "./images/white_tulip.jpg"
     }
 ];
 
