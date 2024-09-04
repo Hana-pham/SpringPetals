@@ -33,6 +33,12 @@ body {
     max-width: 40px;
 }
 
+.icon-mobile {
+    padding-right: 30px;
+    display: inline-block;
+    max-width: 40px;
+}
+
 .contact {
     display: inline-block;
     font-size: 25px;
@@ -240,6 +246,11 @@ body {
         /* Smaller text for contact */
         padding: 0px 5px;
         /* Adjust padding for smaller screens */
+    }
+
+    .icon-mobile {
+        padding-right: 10px;
+        max-width: 15px;
     }
 
     /* Adjust header controls spacing */
