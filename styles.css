@@ -194,6 +194,17 @@ body {
     width: 100px;
     object-fit: contain;
 }
+.button {
+    font-size: 12px;
+    background-color: #e44f7c;
+    color: #FFFFFF;
+    margin: 0;
+    font-family: "Jura", sans-serif;
+    padding: 10px;
+    border: 0;
+    font-weight: bold;
+
+}
 
 .browse-all {
     display: inline-block;
@@ -253,6 +264,80 @@ body {
     clear: both;
 }
 
+/*Product details*/
+/* Product Details Container */
+#product-details h1 {
+    text-align: center;
+}
+/* Image Column */
+#product-details img {
+    max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0px 20px 0px;
+}
+
+
+#product-details .button {
+    display: grid;
+    margin: auto;
+    background-color: #FABBD4;       
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: flex-start;          /* Align button to the start of the details column */
+}
+
+#product-details .button:hover {
+    background-color: #C72654;       /* Darker green on hover */
+}
+
+/*Items divided into 2 columns*/
+.item-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.item-column{
+float: left;
+  width: 50%;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #product-details {
+        flex-direction: column;      /* Stack the columns on top of each other for smaller screens */
+        align-items: center;         /* Center items in the column layout */
+    }
+
+    #product-details img {       
+        max-width: 100%;
+        padding: left 10px right 10px;
+    }
+
+    #product-details .details {
+        padding: 0;
+        text-align: center;          /* Center text on smaller screens */
+        align-items: center;         /* Center details on smaller screens */
+    }
+    #product-details h1{
+        padding: 0;
+        font-size: 20px;
+    }
+
+    #product-details .button {
+        align-self: center;          /* Center the button on smaller screens */
+        width: 100%;
+        padding: left 10px right 10px;
+    }
+}
+
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
 
@@ -293,7 +378,7 @@ body {
     }
 
     .menu a {
-        font-size: 10px;
+        font-size: 17px;
         /* Smaller font size */
         padding: 5px 0;
         /* Adjust padding to fit smaller screens */

@@ -11,8 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <script src="products.js"></script>
     <script>
-    window.onload = renderProducts;
+        window.onload = renderProductDetails;
     </script>
+    
 </head>
 
 <body>
@@ -34,28 +35,19 @@
             <a class="odd" href="#">Event</a>
             <a class="even" href="#">Custom</a>
         </nav>
-
-        <!-- Main Image Section -->
-        <div class="main-image-container">
-            <img src="images/main.jpg" alt="Main Flower Display" class="main-image">
-            <img src="images/image 10 (1).png" alt="Mobile Image" class="image-mobile">
-        </div>
     </section>
 
     <!-- Subscription Section -->
     <section class="subscription">
-        <h2>Subscribe today and share joy with every delivery!</h2>
-        <p>Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
+        <h2 style="font-size: 20px;">Subscribe today and share joy with every delivery!</h2>
+        <p style="font-size: 20px;max-width: 100%;">Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
     </section>
 
-    <!-- Stars of the Week Section -->
-    <section class="stars-of-the-week">
-        <h3>Stars of the week</h3>
-        <ul class="item-image" id="product-list">
-            <!-- Dynamic content will be injected here -->
-        </ul>
-        <a href="#" class="browse-all">Browse All</a>
-    </section>
+<!-- Product Information Section -->
+<section>
+    <div id="product-details"></div> <!-- Add this div -->
+</section>
+
 
     <!-- Footer -->
     <footer class="footer">
