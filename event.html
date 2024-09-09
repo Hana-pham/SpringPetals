@@ -11,9 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <script src="products.js"></script>
     <script>
-        window.onload = renderProductDetails;
+    window.onload = renderProducts;
     </script>
-    
 </head>
 
 <body>
@@ -30,31 +29,26 @@
     <!-- Navigation Section -->
     <section class="navigation">
         <nav class="menu">
-            <a class="odd" href="#">Bouquets</a>
-            <a class="even" href="#">Singles</a>
-            <a class="odd" href="#">Event</a>
-            <a class="even" href="#">Custom</a>
+            <a class="odd" href="/bouquets.html">Bouquets</a>
+            <a class="even" href="/singles.html">Singles</a>
+            <a class="odd" href="/event.html">Event</a>
+            <a class="even" href="/custom.html">Custom</a>
         </nav>
     </section>
 
     <!-- Subscription Section -->
     <section class="subscription">
-        <h2 style="font-size: 20px;">Subscribe today and share joy with every delivery!</h2>
-        <p style="font-size: 20px;max-width: 100%;">Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
+        <h2>Subscribe today and share joy with every delivery!</h2>
+        <p>Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
     </section>
 
-<!-- Product Information Section -->
-<section>
-    <div id="product-details"></div> <!-- Add this div -->
-</section>
-
-<!-- Related Product-->
-<section>
-    <div>
-        <h4 style="text-align: center;">Related Products</h4>
-        <!-- Related products list here-->
-    </div>
-</section>
+    <!-- Stars of the Week Section -->
+    <section class="">
+        <h3>Events</h3>
+        <ul class="item-image" id="product-list">
+            <!-- Dynamic content will be injected here -->
+        </ul>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">

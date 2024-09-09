@@ -308,8 +308,19 @@ float: left;
   width: 50%;
 }
 
+.page-heading{
+    text-align: center;
+    font-size: 40px;
+    background-color: #EF7A9D;
+    color: #FFFFFF;
+    padding: 10px 10px;
+}
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
+    .page-heading{
+        font-size: 20px;
+    }
     #product-details {
         flex-direction: column;      /* Stack the columns on top of each other for smaller screens */
         align-items: center;         /* Center items in the column layout */
@@ -439,7 +450,7 @@ float: left;
         align-items: center;
     }
 
-    .column {
+    .column, .item-column {
         width: 100%;
         /* Make each column take full width on smaller screens */
         text-align: center;
