@@ -10,10 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <script src="products.js"></script>
-    <script>
-        window.onload = renderProductDetails;
-    </script>
-    
 </head>
 
 <body>
@@ -38,15 +34,27 @@
     </section>
 
     <!-- Subscription Section -->
-    <section class="subscription">
-        <h2 style="font-size: 20px;">Subscribe today and share joy with every delivery!</h2>
-        <p style="font-size: 20px;max-width: 100%;">Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
-    </section>
+    <div class="logos">
+        <div class="logos-slide"> 
+            <img src="./images/subs.png">
+            <img src="./images/subs.png">
+            <img src="./images/subs.png">
+        </div>
+    </div>
+    <script> 
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector('.logos').appendChild(copy);
+     </script>
+         <section class="subscription">
+            <p>Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
+        </section>
 
 <!-- Product Information Section -->
 <section>
     <div id="product-details"></div> <!-- Add this div -->
 </section>
+
+
 
 <!-- Related Product-->
 <section>
@@ -78,9 +86,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Link to external JavaScript file -->
-    <script src="products.js"></script>
 </body>
 
 </html>

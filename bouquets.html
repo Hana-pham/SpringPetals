@@ -10,9 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <script src="products.js"></script>
-    <script>
-    window.onload = renderProducts;
-    </script>
 </head>
 
 <body>
@@ -37,31 +34,54 @@
     </section>
 
     <!-- Subscription Section -->
-    <section class="subscription">
-        <h2>Subscribe today and share joy with every delivery!</h2>
-        <p>Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
-    </section>
+    <div class="logos">
+        <div class="logos-slide"> 
+            <img src="./images/subs.png">
+            <img src="./images/subs.png">
+            <img src="./images/subs.png">
+        </div>
+    </div>
+    <script> 
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector('.logos').appendChild(copy);
+     </script>
+         <section class="subscription">
+            <p>Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
+        </section>
     <!-- Stars of the Week Section -->
     <section>
         <h3 class="page-heading">Bouquets</h3>
-        <div class="filter"> 
-            <button class="sort-btn"> Sort by</button>
-            <div class="sort-content">
-                <a href="/">Name A to Z</a>
-                <a href="/">Name A to A</a>
-                <a href="/">Price Low to High</a>
-                <a href="/">Price High to Low</a>
-            </div>
-            <button class="filter-btn"> Filter by Colour</button>
-            <div class="filter-content">
-                <a href="">White</a>
-                <a href="">Pink</a>
-                <a href="">Purple</a>
-                <a href="">Blue</a>
-                <a href="">Yellow</a>
-            </div>
-
+        
+    <!-- Sorting Dropdown -->
+    <div class="filter">
+        <!-- Button to toggle filter section -->
+        <button class="filter-btn" onclick="toggleFilter()">Filter & Sort <span id="arrow">▼</span></button>
+        
+        <!-- Collapsible section for filter and sort options -->
+        <div id="filterOptions" style="display:none;">
+            <!-- Sorting by Name -->
+            <h4>Sort by Name</h4>
+            <label><input type="radio" name="sort" value="name-asc" onchange="applyFilters()"> A-Z</label>
+            <label><input type="radio" name="sort" value="name-desc" onchange="applyFilters()"> Z-A</label>
+            
+            <!-- Sorting by Price -->
+            <h4>Sort by Price</h4>
+            <label><input type="radio" name="sort" value="price-asc" onchange="applyFilters()"> Low to High</label>
+            <label><input type="radio" name="sort" value="price-desc" onchange="applyFilters()"> High to Low</label>
+            
+            <!-- Filter by Color -->
+            <h4>Filter by Color</h4>
+            <label><input type="checkbox" class="color-filter" value="white" onchange="applyFilters()"> White</label>
+            <label><input type="checkbox" class="color-filter" value="red" onchange="applyFilters()"> Red</label>
+            <label><input type="checkbox" class="color-filter" value="pink" onchange="applyFilters()"> Pink</label>
+            <label><input type="checkbox" class="color-filter" value="yellow" onchange="applyFilters()"> Yellow</label>
         </div>
+    </div>
+    
+    
+    
+            
+
         <ul class="item-image" id="product-list">
             <!-- Dynamic content will be injected here -->
         </ul>

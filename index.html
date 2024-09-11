@@ -10,9 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
     <script src="products.js"></script>
-    <script>
-    window.onload = renderProducts;
-    </script>
 </head>
 
 <body>
@@ -29,10 +26,10 @@
     <!-- Navigation Section -->
     <section class="navigation">
         <nav class="menu">
-            <a class="odd" href="#">Bouquets</a>
-            <a class="even" href="#">Singles</a>
-            <a class="odd" href="#">Event</a>
-            <a class="even" href="#">Custom</a>
+            <a class="odd" href="/bouquets.html">Bouquets</a>
+            <a class="even" href="/singles.html">Singles</a>
+            <a class="odd" href="/event.html">Event</a>
+            <a class="even" href="/custom.html">Custom</a>
         </nav>
 
         <!-- Main Image Section -->
@@ -43,10 +40,20 @@
     </section>
 
     <!-- Subscription Section -->
-    <section class="subscription">
-        <h2>Subscribe today and share joy with every delivery!</h2>
-        <p>Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
-    </section>
+    <div class="logos">
+        <div class="logos-slide"> 
+            <img src="./images/subs.png">
+            <img src="./images/subs.png">
+            <img src="./images/subs.png">
+        </div>
+    </div>
+    <script> 
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector('.logos').appendChild(copy);
+     </script>
+         <section class="subscription">
+            <p>Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because! Choose from our weekly, or monthly subscriptions and keep the love blooming.</p>
+        </section>
 
     <!-- Stars of the Week Section -->
     <section class="stars-of-the-week">

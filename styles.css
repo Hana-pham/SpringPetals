@@ -109,6 +109,43 @@ body {
 }
 
 /* Subscription Section */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    
+    to{
+        transform: translateX(-100%);
+    }
+}
+.logos{
+    overflow: hidden;
+    padding-left: 10px;
+    padding-top: 10px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos:before, .logos::after {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255,0),white);
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0),white);
+}
+.logos::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0),white);
+}
+
+
 .subscription {
     text-align: center;
     padding: 20px;
@@ -126,6 +163,23 @@ body {
     font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+.logos-slide{
+    display: inline-block;
+    animation: 20s slide infinite linear;
+
+}
+
+.logos-slide img{
+    height: 50px;
+    margin: 0 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
 }
 
 /* Stars of the Week Section */
@@ -309,32 +363,50 @@ float: left;
 }
 
 .page-heading{
-    text-align: center;
+    text-align: left;
     font-size: 40px;
-    background-color: #EF7A9D;
-    color: #FFFFFF;
-    padding: 10px 10px;
+    background-color: white;
+    color: #D82C4B;
+    padding: 0px 10px;
 }
 
 /*Filter button and dropdown list*/
-.filter button{
-    display: inline-block;
-}
-.sort-btn {
-    float: right;
-    margin-right: 10px;
-}
-.filter-btn{
-    margin-left: 10px;
-}
-.sort-content a, .filter-content a{
-    display: none;
+
+.filter-btn {
+    background-color: #F4DBE7;
+    color: #E52F66;
+    font-family: inherit;
+    display: block;                
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
 }
 
-.sort-btn:hover .sort-content a{
-    text-align: right;
-    display:block;
+#filterOptions label {
+    display: block;
+    margin: 10px 0;
 }
+
+#filterOptions {
+    padding: 10px;
+    border: 1px solid #FFFFFF;
+    background-color: white;
+    margin-top: 10px;
+}
+#filterOptions h4{
+    color: #C72654;
+}
+
+#filterOptions label{
+    color: #E52F66;
+}
+
+
 /* Responsive Design for Smaller Screens */
 @media (max-width: 768px) {
     .page-heading{
@@ -424,12 +496,15 @@ float: left;
         width: 100%;
         height: auto;
     }
-
-    /* Subscription text size */
-    .subscription h2 {
-        font-size: 1.1rem;
+    .logos img{
+        width: 150px;
+        height: auto;
+        padding-top: 15px;
     }
-
+    .filter-btn {
+        font-size: 12px;
+    }
+    /* Subscription text size */
     .subscription p {
         font-size: 0.7rem;
     }
