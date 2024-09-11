@@ -521,10 +521,11 @@ float: left;
 
     .product-image {
         padding-top: 10px;
-        max-width: 120px;
+        max-width: 100%;
         /* Set a maximum width for mobile screens */
         height: auto;
         /* Maintain aspect ratio */
+        padding-bottom: 0;
     }
 
     .item-image {

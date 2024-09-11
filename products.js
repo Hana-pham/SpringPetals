@@ -6,7 +6,7 @@ const products = [
         "price": 30.00,
         "colors": ["yellow", "white"],  // Change 'color' to 'colors'
         "description": "Consists of 6 stems. Little Prince is delightful arrangement arranged into a small ceramic pot. There's no need for the recipients to have to fuss or find a vase for these. Perfect for so many occasions - to celebrate the arrival of a new little prince or to send Happy Birthday wishes. Upgrade to Amazing in a Ceramic and our florists will add extra blooms and design your Little Prince into a larger ceramic pot.",
-        "image": "./images/white_tulip.jpg"
+        "image": "./images/sample.jpg"
     },
     {
         "id": "Roses",
@@ -14,7 +14,7 @@ const products = [
         "price": 45.00,
         "colors": ["pink"],  // Use 'colors' (array) even for a single color
         "description": "A romantic bouquet of red roses.",
-        "image": "./images/white_tulip.jpg"
+        "image": "./images/sample.jpg"
     },
     {
         "id": "Lilies",
@@ -22,7 +22,7 @@ const products = [
         "price": 50.00,
         "colors": ["purple", "white"],  // List all applicable colors
         "description": "An elegant bouquet of lilies.",
-        "image": "./images/white_tulip.jpg"
+        "image": "./images/sample.jpg"
     }
 ];
 
@@ -42,8 +42,8 @@ function renderProducts(productsToRender) {
                     <img src="${product.image}" alt="${product.title}" class="product-image">
                 </a>
             </div>
-            <h4>${product.title}</h4>
-            <p>$${product.price.toFixed(2)}</p>
+            <h4 style="color: #D82C4B;">${product.title}</h4>
+            <p style="color: #D82C4B;">$${product.price.toFixed(2)}</p>
             <p><button class="button">Add to Cart</button></p>
         `;
         productList.appendChild(productItem);
