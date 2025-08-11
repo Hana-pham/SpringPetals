@@ -1,26 +1,36 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Typography + base */
+html, body {
+  @apply bg-cream text-dark-grey antialiased;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Hero text gradient helper (matches your old vibe) */
+.bg-strawberry {
+  background-image: linear-gradient(90deg,#ff80ab,#ff9ec5,#ff80ab);
+  background-size: 200% 200%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Marquee container (subscription bar look) */
+.marquee-outer {
+  @apply relative overflow-hidden bg-light-pink py-3;
+}
+.marquee-track {
+  @apply flex gap-6 w-[200%] animate-marquee;
+}
+.marquee-item {
+  @apply flex-shrink-0 rounded-xl shadow-sm bg-white/80 px-4 py-2 text-sm;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Footer grid */
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+}
+.footer-col h2 {
+  @apply font-semibold mb-3;
+}
+.footer-col a {
+  @apply block text-sm opacity-80 hover:opacity-100;
 }
