@@ -3,31 +3,28 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="px-6 md:px-12 py-12 border-t border-black/5">
-      <div className="footer-grid">
-        <div className="footer-col">
+    <footer className="footer">
+      <div className="row">
+        <div className="column left">
           <Link href="/" aria-label="Spring Petals — Home">
-            <Image src="/logo.png" alt="Spring Petals Logo" width={140} height={40} />
+            {/* was 290x60 */}
+            <Image src="/images/Logo.png" alt="Spring Petals Logo" className="logo" width={180} height={36} />
           </Link>
         </div>
 
-        <div className="footer-col">
+        <div className="column middle">
           <h2>Information</h2>
-          <Link href="/terms">Terms and condition</Link>
           <Link href="/privacy">Privacy policy</Link>
-          <Link href="/delivery">Delivery policy</Link>
           <Link href="/support">Customer services</Link>
-          <Link href="/refunds">Refund policy</Link>
         </div>
 
-        <div className="footer-col">
+        <div className="column right">
           <h2>About</h2>
           <Link href="/about">About us</Link>
           <Link href="/care">Floral care</Link>
           <Link href="/faq">FAQ&apos;s</Link>
         </div>
       </div>
-      <p className="mt-8 text-xs opacity-60">© {new Date().getFullYear()} Spring Petals</p>
     </footer>
   );
 }
