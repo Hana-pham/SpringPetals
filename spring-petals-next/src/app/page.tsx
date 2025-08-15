@@ -1,24 +1,38 @@
+import Bloom from '@/components/Bloom';
+import TrendingGrid from '@/components/TrendinfGrid';
 import SubscriptionBar from '@/components/SubscriptionBar';
 
 export default function HomePage() {
   return (
     <>
-      {/* Navigation / hero container (kept minimal like original) */}
-      <section className="navigation">
-        <div className="main-image-container">
-          <p>can I make you happy ? </p>
+      {/* Logo + “Bloom” (AI entry) + Start */}
+      <Bloom />
+
+      {/* “This month trending” band */}
+      <section className="w-full mt-6">
+        <div className="mx-auto max-w-5xl">
+          <div className="rounded-none bg-[#E76C94] text-white text-center py-3 text-xl tracking-wide">
+            This month trending
+          </div>
         </div>
       </section>
 
-      {/* Scrolling “subscription” image bar */}
-      <SubscriptionBar />
+      {/* 3×2 modern cards */}
+      <section className="px-4 md:px-8 py-6">
+        <div className="mx-auto max-w-5xl">
+          <TrendingGrid />
+          <div className="text-center mt-6">
+            <a href="/explore" className="inline-block bg-[#F4DBE7] text-[#D82C4B] px-5 py-2 rounded-md">
+              Browse All
+            </a>
+          </div>
+        </div>
+      </section>
 
-      {/* Subscription copy block */}
+      {/* Marquee + caption */}
+      <SubscriptionBar />
       <section className="subscription">
-        <p>
-          Brighten someone’s day with fresh flowers, whether it’s a special occasion or just because!
-          Choose from our weekly, or monthly subscriptions and keep the love blooming.
-        </p>
+        <p>Weekly summary, offers and discounts</p>
       </section>
     </>
   );
