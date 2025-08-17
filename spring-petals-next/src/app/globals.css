@@ -1,36 +1,121 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Typography + base */
-html, body {
-  @apply bg-cream text-dark-grey antialiased;
+/* General Styles */
+:root {
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
-/* Hero text gradient helper (matches your old vibe) */
-.bg-strawberry {
-  background-image: linear-gradient(90deg,#ff80ab,#ff9ec5,#ff80ab);
-  background-size: 200% 200%;
+/* Headings use Cormorant Garamond */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant);
+  font-weight: 600;
 }
 
-/* Marquee container (subscription bar look) */
-.marquee-outer {
-  @apply relative overflow-hidden bg-light-pink py-3;
-}
-.marquee-track {
-  @apply flex gap-6 w-[200%] animate-marquee;
-}
-.marquee-item {
-  @apply flex-shrink-0 rounded-xl shadow-sm bg-white/80 px-4 py-2 text-sm;
+/* Body uses Inter */
+body, p, a, li, span, input, button {
+  font-family: var(--font-inter);
 }
 
-/* Footer grid */
-.footer-grid {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+html, body { height: 100%; }   /* make 100vh behave consistently */
+body { margin: 0; }            /* already set, keep it */
+
+/* optional but robust even if a page forgets flex-1 on <main> */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.footer-col h2 {
-  @apply font-semibold mb-3;
+
+main { flex: 1 0 auto; }
+.footer { margin-top: auto; }
+
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically if header has height */
+  padding: 20px;
+  background-color: #FFF7FA;
 }
-.footer-col a {
-  @apply block text-sm opacity-80 hover:opacity-100;
+
+.logo {
+  max-width: 290px;
+  height: auto;
 }
+
+
+
+/* Subscription Section */
+/* Container */
+.logos {
+  /* remove all padding & masks that cause visible edges */
+  position: relative;
+  overflow: hidden;
+  background: transparent;   /* or match parent background */
+  line-height: 0;            /* kill inline baseline gaps */
+}
+
+/* The moving track that holds A + B (duplicate of A) */
+.logos-track {
+  --gap: 48px;               /* spacing between items */
+  --duration: 20s;           /* speed; larger = slower */
+  display: flex;
+  gap: var(--gap);
+  width: max-content;        /* shrink to content for precise 50% translate */
+  will-change: transform;
+  animation: logos-scroll var(--duration) linear infinite;
+  transform: translate3d(0,0,0); /* sub-pixel smoothing */
+}
+
+/* Each item */
+.logos-item {
+  flex: 0 0 auto;            /* no shrink/wrap */
+}
+
+/* Make sure images don't create inline gaps */
+.logos-item img { display: block; }
+
+/* Optional: pause on hover */
+.logos:hover .logos-track { animation-play-state: paused; }
+
+/* Accessibility / user preference */
+@media (prefers-reduced-motion: reduce) {
+  .logos-track { animation: none; }
+}
+
+/* Critical: move exactly one group width (50% of the track) */
+@keyframes logos-scroll {
+  from { transform: translate3d(0,0,0); }
+  to   { transform: translate3d(-50%,0,0); }
+}
+
+
+/* Footer */
+.footer {
+  width: 100%;
+  background: #EF7A9D;
+  padding: 30px 60px;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+/* Push middle+right to the far right */
+.left { margin-right: auto; }
+
+.middle, .right {
+  text-align: left;
+  min-width: 220px;
+}
+
+.footer h2 { color: #D82C4B; margin: 0 0 10px; }
+.footer a  { color: #fff; text-decoration: none; display:block; margin:6px 0; }
+.footer a:hover { color:#222; }
+
+/* Prevent inline-image baseline gap */
+.footer .logo { display: block; height: auto; }
