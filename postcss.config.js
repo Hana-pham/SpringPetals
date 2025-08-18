@@ -1,6 +1,4 @@
-// Tailwind v4
-export default {
-  plugins: {
-    '@tailwindcss/postcss': {},
-  },
-};
+export const plugins = [
+  require('tailwindcss'),
+  require('autoprefixer'),
+];
