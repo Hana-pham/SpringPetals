@@ -1,12 +1,12 @@
+// spring-petals-next/next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'plus.unsplash.com' }, // <- add this
+      { protocol: 'https', hostname: 'plus.unsplash.com' }, // add this
     ],
     formats: ['image/avif', 'image/webp'],
   },
 };
-
 export default nextConfig;
