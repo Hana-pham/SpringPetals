@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SpringPetals
 
-## Getting Started
+SpringPetals is an AI-powered flower discovery platform that integrates multiple external APIs with real-time search, caching, schema validation, and AI enrichment. It delivers high-speed, context-aware results with a focus on **post-purchase care guidance** and **occasion-based recommendations**.
 
-First, run the development server:
+## 🌸 Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Most flower search experiences are slow, fragmented, and lack personalization. SpringPetals solves this by combining image inspiration, symbolic meaning, and care tips in one place — optimized for performance, reliability, and scalability.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Live Demo
+[https://spring-petals.com](https://spring-petals.com)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Features
 
-## Learn More
+- **Multi-Source API Search**  
+  Aggregates results from APIs such as Unsplash, Pexels, and floristry data sources, merges them into a unified feed, and deduplicates entries.
 
-To learn more about Next.js, take a look at the following resources:
+- **Caching & Fallback Logic**  
+  Stores frequent queries in Supabase for <300ms load times. Falls back to cached data if external APIs fail.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **AI Enrichment**  
+  Generates care tips, symbolism explanations, and occasion-based suggestions via OpenAI API.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Personalized Vision Board**  
+  Users can save searches, pin flowers, and receive tailored recommendations.
 
-## Deploy on Vercel
+- **Public Analytics Dashboard**  
+  Displays top searches, seasonal trends, and care tip engagement rates.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js, React, Tailwind CSS  
+- **Backend:** Next.js API Routes, Supabase (PostgreSQL), Edge Functions  
+- **APIs:** Unsplash, Pexels, [floristry data API]  
+- **AI:** OpenAI API  
+- **Testing:** Playwright, Postman, JSON Schema Validation  
+- **Deployment:** Vercel + GitHub Actions (CI/CD)  
+- **Analytics:** Supabase + Chart.js
+
+---
+
+## 🧪 Engineering Highlights
+
+- **API Reliability Layer**  
+  Validates API responses with JSON Schema, handles rate limits with retries and queueing.
+
+- **Performance Optimization**  
+  Edge caching and on-demand image optimization with Next.js Image component.
+
+- **Security & Guardrails**  
+  Sanitizes user input for search, detects prompt injection attempts.
+
+- **Scalability**  
+  Modular API integration layer to add/remove data sources with minimal code changes.
+
+- **Testing & CI/CD**  
+  Automated schema and E2E tests run on every commit. Deployed via GitHub Actions → Vercel.
+
+---
