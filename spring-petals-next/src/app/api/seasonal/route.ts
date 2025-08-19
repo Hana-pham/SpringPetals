@@ -20,7 +20,7 @@ import { NextResponse } from "next/server";
 
 const GOOGLE_KEY = process.env.GOOGLE_API_KEY;
 const CSE_ID = process.env.GOOGLE_CSE_ID;
-const UNSPLASH = process.env.UNSPLASH_ACCESS_KEY;
+const UNSPLASH = (process.env.UNSPLASH_ACCESS_KEY || "").trim();
 const DEFAULT_MODIFIERS =
   (process.env.IMAGE_QUERY_MODIFIERS || "professional aesthetic bouquet").trim();
 
