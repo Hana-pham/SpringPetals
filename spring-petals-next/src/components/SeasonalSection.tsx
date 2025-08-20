@@ -41,9 +41,9 @@ export default function SeasonalSection() {
     <section className="seasonal-section" aria-labelledby="seasonal-title">
       <div className="seasonal-header">
         <div>
-          <h2 id="seasonal-title">Seasonal in Sydney — {data?.month ?? ''}</h2>
+          <h2 id="seasonal-title">Seasonal picks in Sydney this {data?.month ?? ''}</h2>
           <p className="seasonal-sub">
-            Auto-fetched from Google + Unsplash • Updated{' '}
+            Auto-fetched from Google and Unsplash • Updated{' '}
             {data ? new Date(data.updatedAt).toLocaleDateString() : ''}
           </p>
         </div>
