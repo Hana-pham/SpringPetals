@@ -6,12 +6,12 @@ SpringPetals is an AI-powered flower discovery platform that integrates multiple
 
 Most flower search experiences are slow, fragmented, and lack personalization. SpringPetals solves this by combining image inspiration, symbolic meaning, and care tips in one place — optimized for performance, reliability, and scalability.
 
-## 🚀 Live Demo
+##  Live Demo
 [https://spring-petals.com](https://spring-petals.com)
 
 ---
 
-## ✨ Features
+## Features
 
 - **Multi-Source API Search**  
   Aggregates results from APIs such as Unsplash, Pexels, and floristry data sources, merges them into a unified feed, and deduplicates entries.
@@ -42,7 +42,7 @@ Most flower search experiences are slow, fragmented, and lack personalization. S
 
 ---
 
-## 🧪 Engineering Highlights
+##  Engineering Highlights
 
 - **API Reliability Layer**  
   Validates API responses with JSON Schema, handles rate limits with retries and queueing.
