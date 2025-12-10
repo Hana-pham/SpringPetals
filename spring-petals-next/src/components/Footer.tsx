@@ -1,34 +1,26 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="row">
-        <div className="column left">
-          <Link href="/" aria-label="Spring Petals — Home">
-            <Image 
-              src="/images/Logo.png" 
-              alt="Spring Petals Logo" 
-              className="logo" 
-              width={180} 
-              height={36} 
-            />
-          </Link>
-        </div>
+      <div className="footer-container">
+        <nav className="footer-links">
+          <Link href="/about" className="footer-link">About</Link>
+          <span className="footer-divider">|</span>
+          <Link href="/florists" className="footer-link">For florists</Link>
+          <span className="footer-divider">|</span>
+          <Link href="/faq" className="footer-link">FAQs</Link>
+          <span className="footer-divider">|</span>
+          <Link href="/help" className="footer-link">Help</Link>
+          <span className="footer-divider">|</span>
+          <Link href="/terms" className="footer-link">Terms</Link>
+          <span className="footer-divider">|</span>
+          <Link href="/privacy" className="footer-link">Privacy</Link>
+        </nav>
 
-        <div className="column middle">
-          <h2>Information</h2>
-          <Link href="/terms">Terms and condition</Link>
-          <Link href="/privacy">Privacy policy</Link>
-          <Link href="/support">Customer services</Link>
-        </div>
-
-        <div className="column right">
-          <h2>About</h2>
-          <Link href="/about">About us</Link>
-          <Link href="/faq">FAQ&apos;s</Link>
-        </div>
+        <p className="footer-copyright">
+          © {new Date().getFullYear()} Spring Petals. All rights reserved.
+        </p>
       </div>
     </footer>
   );
