@@ -24,22 +24,29 @@ export function Navigation() {
           </span>
         </div>
         <div className="hidden md:flex items-center gap-8">
-          <a 
-            href="#" 
+          <a
+            href="/"
             className="relative text-[#2C2C2C] dark:text-[#F5F5F5] hover:text-[#FFB5C5] dark:hover:text-[#FF85A6] transition-colors group"
           >
             Home
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFB5C5] to-[#FF85A6] group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a 
-            href="#browse" 
+          <a
+            href="/chat"
+            className="relative text-[#2C2C2C] dark:text-[#F5F5F5] hover:text-[#FFB5C5] dark:hover:text-[#FF85A6] transition-colors group flex items-center gap-1"
+          >
+            💬 Chat with AI
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFB5C5] to-[#FF85A6] group-hover:w-full transition-all duration-300"></span>
+          </a>
+          <a
+            href="#browse"
             className="relative text-[#2C2C2C] dark:text-[#F5F5F5] hover:text-[#FFB5C5] dark:hover:text-[#FF85A6] transition-colors group"
           >
             Browse Flowers
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#FFB5C5] to-[#FF85A6] group-hover:w-full transition-all duration-300"></span>
           </a>
-          <a 
-            href="#about" 
+          <a
+            href="#about"
             className="relative text-[#2C2C2C] dark:text-[#F5F5F5] hover:text-[#FFB5C5] dark:hover:text-[#FF85A6] transition-colors group"
           >
             About

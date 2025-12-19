@@ -8,7 +8,8 @@
       "Bash(npm install:*)",
       "Bash(echo:*)",
       "Bash(cat:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "Bash([ -f .env.local ])"
     ]
   }
 }
